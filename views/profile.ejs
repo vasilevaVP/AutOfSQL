@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Профиль</title>
+<style>
+ body {
+        font-family: sans-serif;
+        min-height: 100vh;
+        background-color: #f0f0f0; 
+        margin: 0;
+        text-align: center;
+        color: #540c5e;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #540c5e;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 300px;
+        padding: 15px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 14px;
+      }
+
+      button {
+        padding: 15px 30px;
+        background-color: #8f578a;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #540c5e;
+      }
+
+      a {
+        text-align: center;
+        color: #ea70bd;
+        text-decoration: none;
+        margin-top: 10px;
+        display: block; 
+      }
+</style>
+</head>
+<body>
+<h1>Профиль</h1>
+<% if (user) { %>
+  <p>Имя пользователя: <%= user.username %></p>
+  <a href="/logout">Выйти</a>
+<% } %>
+</body>
+</html>

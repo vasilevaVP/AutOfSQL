@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Вход/Регистрация</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        font-family: sans-serif;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+        margin: 0;
+        gap: 70px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #540c5e;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 300px;
+        padding: 15px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 14px;
+      }
+
+      button {
+        padding: 15px 30px;
+        background-color: #8f578a;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .reg,
+      .log {
+        text-align: center;
+      }
+      button:hover {
+        background-color: #540c5e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reg">
+      <h1>Регистрация</h1>
+      <form action="/register" method="post">
+        <input
+          type="text"
+          name="username"
+          placeholder="Имя пользователя"
+        /><br />
+        <input type="password" name="password" placeholder="Пароль" /><br />
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+    <div class="log">
+      <h1>Вход</h1>
+      <form action="/login" method="post">
+        <input
+          type="text"
+          name="username"
+          placeholder="Имя пользователя"
+        /><br />
+        <input type="password" name="password" placeholder="Пароль" /><br />
+        <button type="submit">Войти</button>
+      </form>
+    </div>
+  </body>
+</html>
